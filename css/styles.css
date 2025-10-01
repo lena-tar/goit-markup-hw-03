@@ -1,4 +1,4 @@
-/* #region Base / Global */
+/* #region common */
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
@@ -7,15 +7,55 @@ body {
 ul,
 ol {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 a {
   text-decoration: none;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* #endregion */
 /* #region Header */
 .page-header {
+  border-bottom: 1px solid #e7e9fc;
+}
+.header-container {
+  display: flex;
+  align-items: center;
 }
 .header-nav {
+  display: flex;
+  align-items: center;
 }
 .logo {
   font-family: "Raleway", sans-serif;
@@ -26,10 +66,19 @@ a {
   text-transform: uppercase;
   color: #4d5ae5;
 }
+.header-logo {
+  padding-top: 24px;
+  padding-bottom: 23px;
+  margin-right: 76px;
+}
 .header-logo .logo-part {
   color: #2e2f42;
 }
 .nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-right: 332px;
 }
 .nav-item {
 }
@@ -45,6 +94,9 @@ a {
   font-style: normal;
 }
 .address-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 .address-link {
   font-size: 16px;
@@ -62,12 +114,19 @@ a {
 /* #region Main */
 .main {
 }
+.order-sect {
+  padding-bottom: 188px;
+}
 .title {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  padding-top: 189px;
+  width: 496px;
+  margin: 0 auto;
+  margin-bottom: 48px;
 }
 .btn-order {
   font-family: "Roboto", sans-serif;
@@ -78,7 +137,14 @@ a {
   color: #fff;
   background-color: #4d5ae5;
   cursor: pointer;
+  min-width: 169px;
+  min-height: 56px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
 }
+
 .btn-order:hover,
 .btn-order:focus {
   background-color: #404bbf;
@@ -88,6 +154,8 @@ a {
 .philo-sect {
 }
 .philo-list {
+  display: inline-flex;
+  gap: 24px;
 }
 .philo-item {
 }
@@ -97,6 +165,7 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .philo-text {
   line-height: 1.5;
@@ -107,6 +176,8 @@ a {
 .team-sect {
   background-color: #f4f4fd;
 }
+.team-container {
+}
 .team-title {
   font-size: 36px;
   line-height: 1.11;
@@ -114,13 +185,24 @@ a {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 .team-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 .team-item {
   background-color: #fff;
+  border-radius: 0 0 4px 4px;
 }
 .team-img {
+  margin-bottom: 32px;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 32px;
 }
 .team-name {
   font-weight: 500;
@@ -129,6 +211,7 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .team-text {
   line-height: 1.5;
@@ -138,6 +221,8 @@ a {
 /* #endregion */
 /* #region Portfolio */
 .portf-sect {
+  margin-left: 141px;
+  margin-right: 141px;
 }
 .portf-title {
   font-size: 36px;
@@ -146,12 +231,23 @@ a {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 .portf-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 .portf-item {
+  width: calc ((100% - 24 * 2) / 3);
 }
 .portf-img {
+}
+.portf-box {
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  padding: 32px 16px;
 }
 .portf-descr {
   font-weight: 500;
@@ -159,6 +255,7 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .portf-text {
   line-height: 1.5;
@@ -167,8 +264,11 @@ a {
 /* #endregion */
 /* #region Footer */
 .page-footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
-.logo {
+
+.footer-logo {
 }
 .footer-logo .logo-part {
   color: #f4f4fd;
@@ -177,6 +277,8 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  width: 264px;
+  margin-top: 16px;
 }
 .title-sect,
 .page-footer {
