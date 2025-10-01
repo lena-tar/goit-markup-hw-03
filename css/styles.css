@@ -44,6 +44,9 @@ p {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+img {
+  display: block;
+}
 /* #endregion */
 /* #region Header */
 .page-header {
@@ -68,7 +71,7 @@ p {
 }
 .header-logo {
   padding-top: 24px;
-  padding-bottom: 23px;
+  padding-bottom: 24px;
   margin-right: 76px;
 }
 .header-logo .logo-part {
@@ -115,7 +118,7 @@ p {
 .main {
 }
 .order-sect {
-  padding-bottom: 188px;
+  padding: 188px 0;
 }
 .title {
   font-size: 56px;
@@ -123,8 +126,7 @@ p {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  padding-top: 189px;
-  width: 496px;
+  max-width: 496px;
   margin: 0 auto;
   margin-bottom: 48px;
 }
@@ -138,7 +140,8 @@ p {
   background-color: #4d5ae5;
   cursor: pointer;
   min-width: 169px;
-  min-height: 56px;
+  height: 56px;
+  border: none;
   padding: 16px 32px;
   border-radius: 4px;
   display: block;
@@ -154,10 +157,11 @@ p {
 .philo-sect {
 }
 .philo-list {
-  display: inline-flex;
+  display: flex;
   gap: 24px;
 }
 .philo-item {
+  width: calc((100% - 72px) / 4);
 }
 .philo-title {
   font-weight: 500;
@@ -197,12 +201,11 @@ p {
   border-radius: 0 0 4px 4px;
 }
 .team-img {
-  margin-bottom: 32px;
 }
 .card-content {
   display: flex;
   flex-direction: column;
-  padding: 0 0 32px;
+  padding: 32px 0;
 }
 .team-name {
   font-weight: 500;
@@ -237,6 +240,7 @@ p {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
+  row-gap: 48px;
 }
 .portf-item {
   width: calc ((100% - 24 * 2) / 3);
@@ -269,6 +273,8 @@ p {
 }
 
 .footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 .footer-logo .logo-part {
   color: #f4f4fd;
@@ -278,7 +284,6 @@ p {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   width: 264px;
-  margin-top: 16px;
 }
 .title-sect,
 .page-footer {
