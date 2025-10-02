@@ -202,6 +202,7 @@ img {
 .team-item {
   background-color: #fff;
   border-radius: 0 0 4px 4px;
+  width: calc((100% - 24px * 3) / 4);
 }
 .team-img {
 }
@@ -227,8 +228,6 @@ img {
 /* #endregion */
 /* #region Portfolio */
 .portf-sect {
-  margin-left: 141px;
-  margin-right: 141px;
 }
 .portf-title {
   font-size: 36px;
@@ -246,7 +245,7 @@ img {
   row-gap: 48px;
 }
 .portf-item {
-  width: calc ((100% - 24 * 2) / 3);
+  width: calc((100% - 24px * 2) / 3);
 }
 .portf-img {
 }
